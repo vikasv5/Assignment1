@@ -7,7 +7,7 @@ package Main;
 
 /**
  *
- * @author caleb
+ * @author Vikas
  */
 import Question1.HourlyWorker;
 import Question1.SalaryWorker;

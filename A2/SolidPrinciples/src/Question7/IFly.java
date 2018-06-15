@@ -7,7 +7,7 @@ package Question7;
 
 /**
  *
- * @author caleb
+ * @author Vikas
  */
 public interface IFly {
     public void Fly();

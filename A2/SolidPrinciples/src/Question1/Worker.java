@@ -7,7 +7,7 @@ package Question1;
 
 /**
  *
- * @author caleb
+ * @author Vikas
  */
 public interface Worker {
     

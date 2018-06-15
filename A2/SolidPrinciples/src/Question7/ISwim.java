@@ -7,7 +7,7 @@ package Question7;
 
 /**
  *
- * @author caleb
+ * @author Vikas
  */
 public interface ISwim {
     public void Swim();

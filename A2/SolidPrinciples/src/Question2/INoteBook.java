@@ -7,7 +7,7 @@ package Question2;
 
 /**
  *
- * @author caleb
+ * @author Vikas
  */
 public interface INoteBook extends ILibraryItem {
     public String GetAuthor();
