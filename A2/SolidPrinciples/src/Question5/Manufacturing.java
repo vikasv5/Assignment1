@@ -9,7 +9,6 @@ package Question5;
  *
  * @author Vikas
  */
-public interface Country {
-public String getAgriculture();
-
+public interface Manufacturing {
+    public String getManufacturing();
 }

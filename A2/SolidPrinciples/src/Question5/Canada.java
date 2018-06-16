@@ -1,5 +1,5 @@
 package Question5;
-public class Canada implements Country
+public class Canada implements AgrManufacturing
 {
 	public String getAgriculture()
 	{

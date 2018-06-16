@@ -1,5 +1,5 @@
 package Question5;
-public class Mexico implements Country
+public class Mexico implements AgrAndTourism
 {
 	public String getAgriculture()
 	{

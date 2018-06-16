@@ -17,6 +17,7 @@ import Question2.Book;
 import Question2.DVD;
 import Question4.BankAccount;
 import Question4.USDollarAccount;
+import Question5.CountryGDPReport;
 import Question7.AquaticInsect;
 import Question6.PiggyBackOperations;
 import Question6.PiggyBank;
@@ -75,7 +76,9 @@ public class MainClass {
              dollarAccount.Debit(10);
              System.out.println(" bank balance"+dollarAccount.GetBalance());
              
-             
+            // Question 5
+            CountryGDPReport report=new CountryGDPReport();
+            report.PrintCountryGDPReport();
              
              
           // Question 6
