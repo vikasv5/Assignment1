@@ -47,7 +47,22 @@ USDollarAccount class run on the account interface variable(any class implementi
 
 Question 5:
 
+Why: CountryGDPReport violates depedency inversion principle as it depends on the concrete implementation of low level class details.
 
+Solution: To solve the problem I have created 3 basic interfaces called Agriculture, Tourism and Manufacturing. Additional two interfaces AgrAndTourism and AgrManufacturing are created which implement Agriculture and Tourism, and Agriculture and Manufacturing respectively. Mexico and Canada implement these respective interfaces. I have also added factory pattern to create concrete instances of Mexico and Canada classes so that CountryGDPReport is not responsible for creating these concrete implementations.
+
+Question 6:
+Why: Single responsibility principle 
+PiggyBank Load and Save Method Violate Single responsibility principle  as they do not have to be concerned with those partcular operations
+Solution:Load and Save methods are moved to PiggyBackOperations class where Piggybank Object is provided to save method to save it into a text file. The load method in PiggyBackOperations class reads the file and returns the Piggybank Object.
+
+
+
+Question 7:
+
+Why:Violates Interface Segregation Principle
+
+Solution:
 
 
 
