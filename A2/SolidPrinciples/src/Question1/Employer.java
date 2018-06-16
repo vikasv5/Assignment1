@@ -3,23 +3,23 @@ import java.util.ArrayList;
 
 public class Employer
 {
-	ArrayList<Worker> hWorkers;
-	ArrayList<Worker> sWorkers;
+	ArrayList<Worker> workers;
+	
 
 	public Employer()
 	{
-            //ArrayList<Worker> hourWorkers,ArrayList<Worker> salWorkers;
+            
 		
-               hWorkers = new ArrayList<Worker>();
+               workers = new ArrayList<Worker>();
 		for (int i = 0; i < 5; i++)
 		{
-			hWorkers.add(WorkerFactory.createHourlyWorker());
+			workers.add(WorkerFactory.createHourlyWorker());
 		}
-              sWorkers = new ArrayList<Worker>();
+              //sWorkers = new ArrayList<Worker>();
 		
 		for (int i = 0; i < 5; i++)
 		{
-			sWorkers.add(WorkerFactory.createSalaryWorker());
+			workers.add(WorkerFactory.createSalaryWorker());
 		}
             
             
@@ -30,16 +30,12 @@ public class Employer
 	public void outputWageCostsForAllStaff(int hours)
 	{
 		float cost = 0.0f;
-		for (int i = 0; i < hWorkers.size(); i++)
+		for (int i = 0; i < workers.size(); i++)
 		{
-			Worker worker = hWorkers.get(i);
+			Worker worker = workers.get(i);
 			cost += worker.calculatePay(hours);
 		}
-		for (int i = 0; i < sWorkers.size(); i++)
-		{
-			Worker worker = sWorkers.get(i);
-			cost += worker.calculatePay(hours);
-		}
+		
 		System.out.println("Total wage cost for all staff = $" + cost);
 	}
 }
