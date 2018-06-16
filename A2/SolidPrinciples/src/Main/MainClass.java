@@ -15,6 +15,9 @@ import Question1.Worker;
 import Question1.Employer;
 import Question2.Book;
 import Question2.DVD;
+import Question3.EmailSvc;
+import Question3.PrintSvc;
+import Question3.ProfitReport;
 import Question4.BankAccount;
 import Question4.USDollarAccount;
 import Question5.CountryGDPReport;
@@ -24,6 +27,7 @@ import Question6.PiggyBank;
 import Question7.FlyingInsect;
 import java.util.ArrayList;
 import java.util.List;
+
 public class MainClass {
     
     public static void main(String[] args) {
@@ -31,19 +35,7 @@ public class MainClass {
 
         
         
-//        	ArrayList<Worker> hourlyWorkers = new ArrayList<Worker>();
-//		for (int i = 0; i < 5; i++)
-//		{
-//			hourlyWorkers.add(new HourlyWorker());
-//		}
-//        	ArrayList<Worker> salaryWorkers = new ArrayList<Worker>();
-//		for (int i = 0; i < 5; i++)
-//		{
-//			salaryWorkers.add(new SalaryWorker());
-//		}
-
-             
-// Question 1
+          // Question 1
              Employer emp= new Employer();
              emp.outputWageCostsForAllStaff(13);
              
@@ -58,7 +50,14 @@ public class MainClass {
         System.out.println(" "+dvd.GetPlayTime().toMinutes());
         System.out.println(" "+dvd.GetCastList());
         
- 
+        //Question 3
+        ProfitReport report = new ProfitReport();
+        report.CreateReport();
+        EmailSvc svc= new EmailSvc("test@gmail.com");
+        report.send(svc);
+        
+        PrintSvc printSvc= new PrintSvc();
+        report.send(printSvc);
         
         //Question 4
              
@@ -77,8 +76,8 @@ public class MainClass {
              System.out.println(" bank balance"+dollarAccount.GetBalance());
              
             // Question 5
-            CountryGDPReport report=new CountryGDPReport();
-            report.PrintCountryGDPReport();
+            CountryGDPReport gdpReport=new CountryGDPReport();
+            gdpReport.PrintCountryGDPReport();
              
              
           // Question 6

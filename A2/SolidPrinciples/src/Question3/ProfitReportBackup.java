@@ -17,11 +17,11 @@ import javax.print.event.PrintJobAdapter;
 import javax.print.event.PrintJobEvent;
 import java.util.ArrayList;
 
-public class ProfitReport
+public class ProfitReportBackup
 {
 	private ArrayList<String> reportData;
 
-	public ProfitReport()
+	public ProfitReportBackup()
 	{
 		reportData = new ArrayList<String>();
 	}
@@ -38,18 +38,6 @@ public class ProfitReport
 		reportData.add("Germany made $133300000");
 		reportData.add("Chile made $1000400");
 	}
-        
-        
-        public void send(Service svc){
-        
-        StringBuilder builder = new StringBuilder();
-	    	for (int i = 0; i < reportData.size(); i++)
-	    	{
-	    		builder.append(reportData.get(i) + "\n");
-	    	}
-        svc.send(builder.toString());
-        }
-        
 
 	public void SendToPrinter()
 	{
@@ -94,21 +82,21 @@ public class ProfitReport
 		}
 	}
 
-//	public void SendToEmail(String emailAddress)
-//	{
-//		try
-//		{
-//	    	StringBuilder builder = new StringBuilder();
-//	    	for (int i = 0; i < reportData.size(); i++)
-//	    	{
-//	    		builder.append(reportData.get(i) + "\n");
-//	    	}
-//	    	EmailSender sender = new EmailSender();
-//	    	sender.SendEmail(emailAddress, "Profit Report!", builder.toString());
-//		}
-//		catch (Exception e)
-//		{
-//			System.out.println("Yipes internet must be down!");
-//		}
-//	}
+	public void SendToEmail(String emailAddress)
+	{
+		try
+		{
+	    	StringBuilder builder = new StringBuilder();
+	    	for (int i = 0; i < reportData.size(); i++)
+	    	{
+	    		builder.append(reportData.get(i) + "\n");
+	    	}
+	    	EmailSender sender = new EmailSender();
+	    	sender.SendEmail(emailAddress, "Profit Report!", builder.toString());
+		}
+		catch (Exception e)
+		{
+			System.out.println("Yipes internet must be down!");
+		}
+	}
 }
