@@ -60,9 +60,9 @@ Solution:Load and Save methods are moved to PiggyBackOperations class where Pigg
 
 Question 7:
 
-Why:Violates Interface Segregation Principle
+Why:Violates Interface Segregation Principle. The Aquatic Insect and Flying Insect are forced to implement Fly() and Swim() methods respectively by Insect Class which has nothing to do with their functionality.
 
-Solution:
+Solution: To solve this problem I created Iswim and IFly interfaces which have swim() and fly() methods respectively. These methods are taken out of Insect Class. Not Insect class has only MoveAntennae() method. Now Aquatic fly implements Insect and Iswim interfaces and Flying Insect implements IFly and IInsect interfaces and thus not having any methods they do not need to implement.
 
 
 
