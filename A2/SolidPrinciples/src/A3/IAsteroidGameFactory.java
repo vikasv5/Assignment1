@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public interface IAsteroidGameFactory
 {
 	public BoardComponent MakeSquare();
+        public BoardComponent MakeShield(BoardComponent comp);
 	public BoardComponent MakeBuilding();
 	public Asteroid MakeAsteroid(int height);
 	public ArrayList<ArrayList<BoardComponent>> MakeBoard(int height, int width);

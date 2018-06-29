@@ -15,6 +15,7 @@ public class Building extends BoardComponent
 	public void Operation()
 	{
 		// Buildings just stand there, they don't do anything.
+            //System.out.println("Building operation is called");
 	}
 
 	@Override

@@ -9,6 +9,12 @@ public class AsteroidGameFactory implements IAsteroidGameFactory
 	{
 		return new Square();
 	}
+        
+        @Override
+	public BoardComponent MakeShield(BoardComponent comp)
+	{
+		return new Shield(comp);
+	}
 
 	@Override
 	public BoardComponent MakeBuilding()
@@ -93,6 +99,13 @@ public class AsteroidGameFactory implements IAsteroidGameFactory
 			}
 			case "SPAWN_SHIELD":
 			{
+                            
+                            int x = Integer.parseInt(args[0]);
+				int y = Integer.parseInt(args[1]);
+                            BoardComponent square = GameBoard.Instance().GetBoard().get(y).get(x);
+                            return new SpawnShieldCommand(square, args);
+                            
+                            
 				// TODO:  Implement a command that uses the Decorator pattern to decorate
 				//        a Square object with a shield.  The shield will have health,
 				//        like a building, hard coded to 2 health in the decorator object.
