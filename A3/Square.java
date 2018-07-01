@@ -1,9 +1,10 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 // Square is a composite, making up the Composite pattern (contains components)
 public class Square extends BoardComponent
 {
-	private final ArrayList<BoardComponent> children;
+	public  ArrayList<BoardComponent> children;
 	private BoardComponent parent;
 	
 	public Square()
@@ -11,6 +12,11 @@ public class Square extends BoardComponent
 		super();
 		children = new ArrayList<BoardComponent>();
 	}
+        
+        public ArrayList<BoardComponent> getChildren(){
+        return children;
+        }
+        
 
 	@Override
 	public void Operation()
@@ -37,4 +43,40 @@ public class Square extends BoardComponent
 	{
 		children.remove(child);
 	}
+        
+      //  @Override
+        public void update()
+        {
+            for(Iterator<BoardComponent> childIter = children.iterator(); childIter.hasNext();){
+            boolean removeChild;             
+                    BoardComponent child= childIter.next();
+                if((child instanceof Shield)   )
+            {
+            Shield s= (Shield)child;
+            s.update();
+            if(s.getShieldHealth()==0){
+            children.remove(child);
+                System.out.println("Removing Shield");
+            }
+            
+            }
+            
+            
+        
+            if( child instanceof Building){
+            Building b= (Building)child;
+            
+            b.update();
+            if(b.getBuildingHealth()==0){
+            //children.remove(child);
+            System.out.println("Removing Building");
+            }
+                
+            
+            }
+        }
+        
+        }
+        
+        
 }

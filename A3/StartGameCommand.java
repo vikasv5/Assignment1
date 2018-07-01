@@ -1,3 +1,4 @@
+
 public class StartGameCommand extends Command
 {
 	public StartGameCommand(Object receiver, String[] args)

@@ -1,7 +1,5 @@
-
 import java.util.ArrayList;
 
-// Implementation of the Abstract Factory pattern's interface
 public class AsteroidGameFactory implements IAsteroidGameFactory
 {
 	@Override
@@ -28,6 +26,9 @@ public class AsteroidGameFactory implements IAsteroidGameFactory
 	public Asteroid MakeAsteroid(int height)
 	{
 		Asteroid asteroid = new Asteroid(height);
+                AsteroidImpact ai= new AsteroidImpact();
+                ai.addSquare(asteroid);
+                
 		return asteroid;
 	}
 	
@@ -76,6 +77,7 @@ public class AsteroidGameFactory implements IAsteroidGameFactory
 				int x = Integer.parseInt(args[0]);
 				int y = Integer.parseInt(args[1]);
 				BoardComponent square = GameBoard.Instance().GetBoard().get(y).get(x);
+                                
                                 
 				return new SpawnAsteroidCommand(square, args);
 			}

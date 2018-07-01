@@ -10,6 +10,7 @@ public abstract class BoardComponent
 	}
 	
 	public abstract void Operation();
+        
 	public abstract void Add(BoardComponent child);
 	public abstract void Remove(BoardComponent child);
 	
@@ -17,4 +18,6 @@ public abstract class BoardComponent
 	{
 		this.parent = parent;
 	}
+        
+        
 }

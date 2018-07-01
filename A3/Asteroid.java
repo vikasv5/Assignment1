@@ -1,5 +1,4 @@
-// Asteroid is a leaf component in the composite structure
-public class Asteroid extends BoardComponent
+public class Asteroid extends BoardComponent 
 {
 	private int height;
 	
@@ -19,6 +18,10 @@ public class Asteroid extends BoardComponent
                 System.out.println("Operation in Asteroid of height:"+height);
 		if (0 == height)
 		{
+                    
+                    AsteroidImpact impact= new AsteroidImpact();
+                    System.out.println("Parent of the ASteroid Notified");
+                    impact.notifySquare(parent);
 			// When an Asteroid impacts the ground it needs to send an event to the
 			// observer to tell it that it impacted the ground in the square it belongs
 			// to.
@@ -41,4 +44,6 @@ public class Asteroid extends BoardComponent
 	{
 		// I'm a leaf!
 	}	
+
+   
 }

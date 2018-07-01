@@ -6,7 +6,7 @@
 public class Shield extends SquareDecorater{
     
     BoardComponent component;
-    private int shieldHealth;
+    public int shieldHealth;
     
     public Shield(BoardComponent comp){
       
@@ -35,6 +35,21 @@ public class Shield extends SquareDecorater{
     @Override
     public void Remove(BoardComponent child) {
     
+    }
+    
+  //  @Override
+    public void update(){
+    if(shieldHealth>0)shieldHealth--;
+    
+//    if(shieldHealth==0){
+//    this.parent.Remove(this);
+//    
+//    }
+    
+    }
+    
+    public int getShieldHealth(){
+    return shieldHealth;
     }
     
     

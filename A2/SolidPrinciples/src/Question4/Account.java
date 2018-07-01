@@ -7,7 +7,7 @@ package Question4;
 
 /**
  *
- * @author jabez.vejendla
+ * @author Vikas
  */
 public interface Account {
     public float GetBalance();

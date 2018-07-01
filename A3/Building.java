@@ -3,7 +3,7 @@
 // Buildings cannot have children.
 public class Building extends BoardComponent
 {
-	private int buildingHealth;
+	public int buildingHealth;
 	
 	public Building()
 	{
@@ -14,9 +14,21 @@ public class Building extends BoardComponent
 	@Override
 	public void Operation()
 	{
-	System.out.println("Operation in Building");	
-            // Buildings just stand there, they don't do anything.
-              //System.out.println("Building operation is called");
+	System.out.println("Operation in Building of building health:"+buildingHealth);	
+        /*
+        buildingHealth=buildingHealth-1;
+        
+        if(buildingHealth==0){
+            System.out.println("removing the building");
+            
+            this.parent.Remove(this);
+            GameBoard.Instance().DecrementBuildingCount();
+        
+        
+        }*/
+        
+        
+        
 	}
 
 	@Override
@@ -30,4 +42,23 @@ public class Building extends BoardComponent
 	{
 		// Do nothing, I'm a leaf.
 	}
+        
+     //   @Override
+        public void update(){
+        
+        if(buildingHealth>0)buildingHealth--;
+        
+//        if(buildingHealth==0){
+//            this.parent.Remove(this);
+            GameBoard.Instance().DecrementBuildingCount();
+        
+        
+        }
+        
+        public int getBuildingHealth(){
+        return buildingHealth;
+        
+        }
+        
+        
 }

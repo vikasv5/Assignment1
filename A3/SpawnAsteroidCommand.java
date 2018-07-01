@@ -11,6 +11,8 @@ public class SpawnAsteroidCommand extends Command
 	{
 		// The receiver for the SpawnAsteroidCommand is the Square to spawn the asteroid in.
 		Square square = (Square) receiver;
+                
+                
 		// The args for SpawnAsteroidCommand are the X,Y coordinate for the asteroid
 		// used by the factory, and the height of the asteroid.
 		int height = Integer.parseInt(args[2]);

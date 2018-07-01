@@ -1,6 +1,5 @@
 
 
-
 // The abstract class (interface) all Command pattern objects extend.
 public abstract class Command
 {	
