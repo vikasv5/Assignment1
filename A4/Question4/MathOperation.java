@@ -1,45 +1,20 @@
 public class MathOperation
 {
-	public enum OperationType
-	{
-		DIVIDE,
-		MULTIPLY,
-		ADD,
-		SUBTRACT
-	};
 
-	private int leftOperand;
-	private int rightOperand;
-	private OperationType operationType;
 
-	public MathOperation(OperationType operationType, int leftOperand, int rightOperand)
+	Operand operand;
+	private OperationTypeInterface operationType;
+
+	public MathOperation(OperationTypeInterface operationType, Operand operand)
 	{
-		this.leftOperand = leftOperand;
-		this.rightOperand = rightOperand;
+		this.operand=operand;
 		this.operationType = operationType;
 	}
 
 	public int GetResult()
 	{
-		switch (operationType)
-		{
-			case DIVIDE:
-			{
-				return leftOperand / rightOperand;
-			}
-			case MULTIPLY:
-			{
-				return leftOperand * rightOperand;
-			}
-			case ADD:
-			{
-				return leftOperand + rightOperand;
-			}
-			case SUBTRACT:
-			{
-				return leftOperand - rightOperand;
-			}
-		}
-		return 0;
+		
+		return operationType.GetResult(operand);
+		
 	}
 }
