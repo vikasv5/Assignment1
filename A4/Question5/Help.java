@@ -42,7 +42,7 @@ public class Help
            }
            builder.replace(builder.length()-1, builder.length(), "");
             
-	// The builder.toString() is not returned as the keyset returns list in a random ordered and the String is hardcoded in the main class	
+	// The builder.toString() is not returned as the keyset returns list in a random order and the Comparision String is hardcoded in the main class	
            return "Commands: print, open, close";
                 
                 
