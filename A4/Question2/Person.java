@@ -7,11 +7,25 @@ public class Person
 
 	private String userName;
 	private String password;
+        private AuthenticateUser user= new AuthenticateUser();
+        
 
 	public Person(String name)
 	{
 		this.name = name;
 	}
+
+    public String getPassword() {
+        return password;
+    }
+        
+        
+
+    public String getName() {
+        return name;
+    }
+        
+        
 
 	public void SetAreaCode(String areaCode)
 	{
@@ -39,8 +53,9 @@ public class Person
 		this.userName = userName;
 		this.password = password;
 	}
-	public boolean AuthenticateUser()
-	{
-		return (userName.equals("joe") && password.equals("joepass"));
-	}
+        
+          public boolean AuthenticateUser() {
+              
+        return user.authenticate(this);
+    }
 }

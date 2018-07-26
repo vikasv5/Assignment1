@@ -9,14 +9,16 @@ public class Person
 
 	public boolean IsPersonRob()
 	{
-		return name.equals("Rob") && IsRobsAddress("Rob street", "Rob city", "Rob province", "Rob postalcode");
+            
+            Address addr= new Address("Rob street", "Rob city","Rob province", "Rob postalcode");
+            return name.equals("Rob") && IsRobsAddress(addr);
 	}
 
-	private boolean IsRobsAddress(String street, String city, String province, String postalCode)
+	private boolean IsRobsAddress(Address addr)
 	{
-		return street.equals("Rob street") &&
-			city.equals("Rob city") &&
-			province.equals("Rob province") &&
-			postalCode.equals("Rob postalcode");
+		return addr.getStreet().equals("Rob street") &&
+			addr.getCity().equals("Rob city") &&
+			addr.getProvince().equals("Rob province") &&
+			addr.getPostalCode().equals("Rob postalcode");
 	}
 }
