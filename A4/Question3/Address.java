@@ -1,13 +1,13 @@
 public class Address {
- 
-    String street; 
+
+    String street;
     String city;
-    String province; 
+    String province;
     String postalCode;
-    
+
     public Address() {
     }
-    
+
     public Address(String street, String city, String province, String postalCode) {
         this.street = street;
         this.city = city;
@@ -30,10 +30,7 @@ public class Address {
     public String getPostalCode() {
         return postalCode;
     }
-    
 
 
-
-    
 }
 

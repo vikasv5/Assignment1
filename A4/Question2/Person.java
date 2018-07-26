@@ -1,61 +1,54 @@
-public class Person
-{
-	private String name;
+public class Person {
+    private String name;
 
-	private String areaCode;
-	private String phoneNumber;
+    private String areaCode;
+    private String phoneNumber;
 
-	private String userName;
-	private String password;
-        private AuthenticateUser user= new AuthenticateUser();
-        
+    private String userName;
+    private String password;
+    private AuthenticateUser user = new AuthenticateUser();
 
-	public Person(String name)
-	{
-		this.name = name;
-	}
+
+    public Person(String name) {
+        this.name = name;
+    }
 
     public String getPassword() {
         return password;
     }
-        
-        
+
 
     public String getName() {
         return name;
     }
-        
-        
 
-	public void SetAreaCode(String areaCode)
-	{
-		this.areaCode = areaCode;
-	}
-	public String GetAreaCode()
-	{
-		return areaCode;
-	}
-	public void SetPhoneNumber(String phoneNumber)
-	{
-		this.phoneNumber = phoneNumber;
-	}
-	public String GetPhoneNumber()
-	{
-		if (areaCode != null && areaCode != "")
-		{
-			return "(" + areaCode + ") " + phoneNumber; 
-		}
-		return phoneNumber;
-	}
 
-	public void SetLoginCredentials(String userName, String password)
-	{
-		this.userName = userName;
-		this.password = password;
-	}
-        
-          public boolean AuthenticateUser() {
-              
+    public void SetAreaCode(String areaCode) {
+        this.areaCode = areaCode;
+    }
+
+    public String GetAreaCode() {
+        return areaCode;
+    }
+
+    public void SetPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String GetPhoneNumber() {
+        if (areaCode != null && areaCode != "") {
+            return "(" + areaCode + ") " + phoneNumber;
+        }
+        return phoneNumber;
+    }
+
+    public void SetLoginCredentials(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+    }
+
+    public boolean AuthenticateUser() {
+
         return user.authenticate(this);
     }
 }

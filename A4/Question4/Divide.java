@@ -1,8 +1,8 @@
-public class Divide implements OperationTypeInterface{
+public class Divide implements OperationTypeInterface {
 
     @Override
     public int GetResult(Operand op) {
-        return op.getLeftOperand()/op.getRightOperand();
+        return op.getLeftOperand() / op.getRightOperand();
     }
-    
+
 }

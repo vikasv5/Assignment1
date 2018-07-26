@@ -1,8 +1,8 @@
-public class Multiply implements OperationTypeInterface{
+public class Multiply implements OperationTypeInterface {
 
     @Override
     public int GetResult(Operand op) {
-        return op.getLeftOperand()*op.getRightOperand();
+        return op.getLeftOperand() * op.getRightOperand();
     }
-    
+
 }

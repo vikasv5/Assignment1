@@ -1,8 +1,8 @@
-public class closeCommand implements CommandInterface{
+public class closeCommand implements CommandInterface {
 
     @Override
     public String getHelp() {
-      return "close -f <path>";
+        return "close -f <path>";
     }
-    
+
 }
