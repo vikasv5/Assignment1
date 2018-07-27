@@ -1,8 +1,12 @@
-public class Add implements OperationTypeInterface {
+public class Add extends MathOperation{
 
-    @Override
-    public int GetResult(Operand op) {
-        return op.getLeftOperand() + op.getRightOperand();
+    public Add(Operand operand) {
+        super(operand);
     }
 
+    @Override
+    public int GetResult() {
+        return operand.getLeftOperand() + operand.getRightOperand();
+    }
+    
 }

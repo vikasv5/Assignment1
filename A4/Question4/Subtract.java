@@ -1,8 +1,15 @@
-public class Subtract implements OperationTypeInterface {
+public class Subtract extends MathOperation{
 
-    @Override
-    public int GetResult(Operand op) {
-        return op.getLeftOperand() - op.getRightOperand();
+    public Subtract(Operand operand) {
+        super(operand);
     }
 
+    @Override
+    public int GetResult() {
+        return operand.getLeftOperand()-operand.getRightOperand();
+    }
+
+    
+  
+    
 }

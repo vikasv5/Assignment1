@@ -1,6 +1,6 @@
 public class Operand {
-    private int leftOperand;
-    private int rightOperand;
+private int leftOperand;
+private int rightOperand;
 
     public Operand() {
     }
@@ -19,4 +19,7 @@ public class Operand {
     }
 
 
+        
+        
+    
 }

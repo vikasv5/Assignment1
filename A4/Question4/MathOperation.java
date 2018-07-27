@@ -1,17 +1,16 @@
-public class MathOperation {
+public abstract class MathOperation
+{
 
 
-    Operand operand;
-    private OperationTypeInterface operationType;
+	Operand operand;
+	
 
-    public MathOperation(OperationTypeInterface operationType, Operand operand) {
-        this.operand = operand;
-        this.operationType = operationType;
-    }
+	public MathOperation( Operand operand)
+	{
+		this.operand=operand;
+	
+	}
 
-    public int GetResult() {
-
-        return operationType.GetResult(operand);
-
-    }
+	public abstract int GetResult();
+	
 }
