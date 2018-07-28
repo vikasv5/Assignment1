@@ -33,7 +33,6 @@ public class Question1 {
     }
 
     public StringBuilder addParagraphToBuilder(StringBuilder builder, String para[]) {
-
         for (int i = 0; i < para.length; i++) {
             builder.append("<P>");
             builder.append(para[i]);
