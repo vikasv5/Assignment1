@@ -1,16 +1,11 @@
 public abstract class MathOperation
 {
-
-
 	Operand operand;
 	
-
 	public MathOperation( Operand operand)
 	{
-		this.operand=operand;
-	
+	this.operand=operand;
 	}
 
-	public abstract int GetResult();
-	
+	public abstract int GetResult();	
 }

@@ -1,5 +1,4 @@
 public class Add extends MathOperation{
-
     public Add(Operand operand) {
         super(operand);
     }
@@ -8,5 +7,4 @@ public class Add extends MathOperation{
     public int GetResult() {
         return operand.getLeftOperand() + operand.getRightOperand();
     }
-    
-}
+  }

@@ -1,5 +1,4 @@
 public class Divide extends MathOperation{
-
     public Divide(Operand operand) {
         super(operand);
     }
@@ -8,5 +7,4 @@ public class Divide extends MathOperation{
     public int GetResult() {
         return operand.getLeftOperand()/operand.getRightOperand();
     }
-    
 }

@@ -1,6 +1,6 @@
 public class Operand {
-private int leftOperand;
-private int rightOperand;
+    private int leftOperand;
+    private int rightOperand;
 
     public Operand() {
     }
@@ -17,9 +17,4 @@ private int rightOperand;
     public int getRightOperand() {
         return rightOperand;
     }
-
-
-        
-        
-    
 }

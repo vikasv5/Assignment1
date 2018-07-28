@@ -19,12 +19,8 @@ public class Calculator
 	}
 
 	public static int Subtract(int left,int right)
-	{
-		
+	{		
                 MathOperation op = new Subtract(new Operand(left,right));
 		return op.GetResult();
-                
-	}
-        
-        
+        }    
 }

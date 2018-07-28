@@ -1,5 +1,4 @@
 public class Address {
-
     String street;
     String city;
     String province;
@@ -14,7 +13,6 @@ public class Address {
         this.province = province;
         this.postalCode = postalCode;
     }
-
 
     public void setStreet() {
         this.street=street;
@@ -47,7 +45,5 @@ public class Address {
     public String getPostalCode() {
         return postalCode;
     }
-
-
 }
 
