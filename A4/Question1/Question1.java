@@ -23,7 +23,6 @@ public class Question1 {
                 "Hello, babies. Welcome to Earth. It's hot in the summer and cold in the winter. It's round and wet and crowded. At the outside, babies, you've got about a hundred years here. There's only one rule that I know of, babies—God damn it, you've got to be kind.",
                 "He stepped down, trying not to look long at her, as if she were the sun, yet he saw her, like the sun, even without looking.",
                 "How wonderful it is that nobody need wait a single moment before starting to improve the world."
-
         };
         addParagraphToBuilder(builder, paragraphs);
         headers = new String[]{"<A HREF=\"page2.html\">Click here to go to the next page!</A>\n"};
@@ -47,5 +46,4 @@ public class Question1 {
         }
         return builder;
     }
-
 }

@@ -13,11 +13,9 @@ public class Person {
         return password;
     }
 
-
     public String getName() {
         return name;
     }
-
 
     public void SetAreaCode(String areaCode) {
 	phone.setAreaCode(areaCode);
@@ -41,7 +39,6 @@ public class Person {
     }
 
     public boolean AuthenticateUser() {
-
         return user.authenticate(this);
     }
 }
